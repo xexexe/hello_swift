@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F52BBDE1EC1BCF300406085 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F52BBDD1EC1BCF300406085 /* Alamofire.framework */; };
+		1F52BBE01EC1BD0C00406085 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */; };
 		1F8AE80F1EC08A4B00F1C6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AE80E1EC08A4B00F1C6AF /* AppDelegate.swift */; };
 		1F8AE8111EC08A4B00F1C6AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AE8101EC08A4B00F1C6AF /* ViewController.swift */; };
 		1F8AE8141EC08A4B00F1C6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8AE8121EC08A4B00F1C6AF /* Main.storyboard */; };
@@ -43,6 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1F52BBE01EC1BD0C00406085 /* Alamofire.framework.dSYM in CopyFiles */,
 				1F8AE8451EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F52BBDD1EC1BCF300406085 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		1F8AE80B1EC08A4B00F1C6AF /* BeginProgect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeginProgect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8AE80E1EC08A4B00F1C6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F8AE8101EC08A4B00F1C6AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F52BBDE1EC1BCF300406085 /* Alamofire.framework in Frameworks */,
 				1F8AE8411EC08B6E00F1C6AF /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +103,7 @@
 		1F8AE8021EC08A4B00F1C6AF = {
 			isa = PBXGroup;
 			children = (
+				1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */,
 				1F8AE8441EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM */,
 				1F8AE80D1EC08A4B00F1C6AF /* BeginProgect */,
 				1F8AE8251EC08A4C00F1C6AF /* BeginProgectTests */,
@@ -151,6 +158,7 @@
 		1F8AE83F1EC08B6E00F1C6AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F52BBDD1EC1BCF300406085 /* Alamofire.framework */,
 				1F8AE8401EC08B6E00F1C6AF /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
@@ -296,6 +304,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputPaths = (
 			);
@@ -572,6 +581,7 @@
 				1F8AE8381EC08A4C00F1C6AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F8AE8391EC08A4C00F1C6AF /* Build configuration list for PBXNativeTarget "BeginProgectTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +590,7 @@
 				1F8AE83B1EC08A4C00F1C6AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F8AE83C1EC08A4C00F1C6AF /* Build configuration list for PBXNativeTarget "BeginProgectUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +599,7 @@
 				1F8AE83E1EC08A4C00F1C6AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

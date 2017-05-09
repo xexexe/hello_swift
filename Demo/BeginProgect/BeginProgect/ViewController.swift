@@ -7,21 +7,23 @@
 //
 
 import UIKit
-import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
 
-        let json = JSON(12345)
-        if json[0].string != nil {
-            //Do something you want
-        } else {
-            print(json[0])       // "Array[0] failure, It is not an array"
-            print(json[0].error as Any) // "Array[0] failure, It is not an array"
+        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
         }
     }
 
