@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F52BBDE1EC1BCF300406085 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F52BBDD1EC1BCF300406085 /* Alamofire.framework */; };
 		1F52BBE01EC1BD0C00406085 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */; };
+		1F5D134A1EC983AC0032480D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5D13491EC983AC0032480D /* SQLite.framework */; };
+		1F5D134C1EC983D60032480D /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F5D134B1EC983D60032480D /* SQLite.framework.dSYM */; };
 		1F76B6661EC45A730033FAEA /* OCClassForBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F76B6651EC45A730033FAEA /* OCClassForBridge.m */; };
 		1F76B66B1EC45D9C0033FAEA /* SwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76B66A1EC45D9C0033FAEA /* SwiftClass.swift */; };
 		1F76B6761EC545A10033FAEA /* CClass.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F76B6741EC545A10033FAEA /* CClass.c */; };
@@ -49,6 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1F5D134C1EC983D60032480D /* SQLite.framework.dSYM in CopyFiles */,
 				1F52BBE01EC1BD0C00406085 /* Alamofire.framework.dSYM in CopyFiles */,
 				1F8AE8451EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM in CopyFiles */,
 			);
@@ -59,6 +62,8 @@
 /* Begin PBXFileReference section */
 		1F52BBDD1EC1BCF300406085 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		1F5D13491EC983AC0032480D /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		1F5D134B1EC983D60032480D /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/iOS/SQLite.framework.dSYM; sourceTree = "<group>"; };
 		1F76B6631EC45A730033FAEA /* BeginProgect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeginProgect-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F76B6641EC45A730033FAEA /* OCClassForBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClassForBridge.h; sourceTree = "<group>"; };
 		1F76B6651EC45A730033FAEA /* OCClassForBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClassForBridge.m; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5D134A1EC983AC0032480D /* SQLite.framework in Frameworks */,
 				1F52BBDE1EC1BCF300406085 /* Alamofire.framework in Frameworks */,
 				1F8AE8411EC08B6E00F1C6AF /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -142,6 +148,7 @@
 		1F8AE8021EC08A4B00F1C6AF = {
 			isa = PBXGroup;
 			children = (
+				1F5D134B1EC983D60032480D /* SQLite.framework.dSYM */,
 				1F52BBDF1EC1BD0C00406085 /* Alamofire.framework.dSYM */,
 				1F8AE8441EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM */,
 				1F8AE80D1EC08A4B00F1C6AF /* BeginProgect */,
@@ -200,6 +207,7 @@
 		1F8AE83F1EC08B6E00F1C6AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F5D13491EC983AC0032480D /* SQLite.framework */,
 				1F52BBDD1EC1BCF300406085 /* Alamofire.framework */,
 				1F8AE8401EC08B6E00F1C6AF /* SwiftyJSON.framework */,
 			);
@@ -348,6 +356,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
 			);
 			outputPaths = (
 			);
