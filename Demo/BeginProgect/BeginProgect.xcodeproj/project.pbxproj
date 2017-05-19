@@ -25,6 +25,7 @@
 		1F8AE8411EC08B6E00F1C6AF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8AE8401EC08B6E00F1C6AF /* SwiftyJSON.framework */; };
 		1F8AE8451EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8AE8441EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM */; };
 		1FC3B48E1EC597250012F5F9 /* CClassNO.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B48D1EC597250012F5F9 /* CClassNO.c */; };
+		1FD442281ECEE13300248B78 /* DMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD442271ECEE13300248B78 /* DMWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		1F8AE8401EC08B6E00F1C6AF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		1F8AE8441EC08BDA00F1C6AF /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/iOS/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		1FC3B48D1EC597250012F5F9 /* CClassNO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CClassNO.c; sourceTree = "<group>"; };
+		1FD442271ECEE13300248B78 /* DMWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				1F76B6621EC45A460033FAEA /* OCClass */,
 				1F8AE80E1EC08A4B00F1C6AF /* AppDelegate.swift */,
 				1F8AE8101EC08A4B00F1C6AF /* ViewController.swift */,
+				1FD442271ECEE13300248B78 /* DMWebViewController.swift */,
 				1F8AE8121EC08A4B00F1C6AF /* Main.storyboard */,
 				1F8AE8181EC08A4B00F1C6AF /* Assets.xcassets */,
 				1F8AE81A1EC08A4B00F1C6AF /* LaunchScreen.storyboard */,
@@ -373,6 +376,7 @@
 			files = (
 				1F76B6761EC545A10033FAEA /* CClass.c in Sources */,
 				1F8AE8111EC08A4B00F1C6AF /* ViewController.swift in Sources */,
+				1FD442281ECEE13300248B78 /* DMWebViewController.swift in Sources */,
 				1F76B6661EC45A730033FAEA /* OCClassForBridge.m in Sources */,
 				1F76B66B1EC45D9C0033FAEA /* SwiftClass.swift in Sources */,
 				1FC3B48E1EC597250012F5F9 /* CClassNO.c in Sources */,
