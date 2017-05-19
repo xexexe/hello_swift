@@ -12,6 +12,8 @@ import WebKit
 class DMWebViewController: UIViewController ,WKNavigationDelegate, WKUIDelegate{
     /**
      参考：http://www.jianshu.com/p/d29384454a9a 。
+     *    http://www.jianshu.com/p/403853b63537
+     *    http://stackoverflow.com/questions/34751860/get-html-from-wkwebview-in-swift
      */
     var webview = WKWebView()
     var btnBack = UIBarButtonItem()
