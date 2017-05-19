@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        self.demoFuncForSQLite()
+        self.demoForRegex()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +24,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Demo for regex
+    func demoForRegex() {
+        let email = "mail@hehe.com"
+        let emailString = "([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailString)
+        let bEmail:Bool = emailPredicate.evaluate(with: email)
+        print(bEmail)
+    }
+    
+    // Demo for SQLite
     func demoFuncForSQLite() {
         let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
@@ -62,12 +72,15 @@ class ViewController: UIViewController {
             try db.run(alice.delete())
             // DELETE FROM "users" WHERE ("id" = 1)
             
-        } catch  {
+            try db.scalar(users.count)
+            // SELECT count(*) FROM "users"
             
+        } catch  {
+            print(error)
         }
-
     }
     
+    // Demo for Alamofire
     func demoFuncForAlamofire() {
          Alamofire.request("https://www.baidu.com").responseJSON { response in
             print(response.request)  // original URL request
@@ -81,6 +94,7 @@ class ViewController: UIViewController {
         }       
     }
     
+    // Demo for use C and C++
     func demoFuncForUseingCAndObjC() {
         //swift -> oc
         let funOC = OCClassForBridge()
@@ -99,7 +113,6 @@ class ViewController: UIViewController {
         let funcCClass33 = sum3(10, 3)
         print("swift->C have .h output: \(funcCClass33)")
     }
-
 
 }
 
