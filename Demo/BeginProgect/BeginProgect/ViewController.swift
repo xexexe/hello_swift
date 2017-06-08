@@ -16,12 +16,39 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        self.demoForRegex()
+//        self.demoForRegex()
+        self.demoForBase64()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func demoForBase64() {
+        let str = "iOS Developer Tips encoded in Base64"
+        print("Original: \(str)")
+        
+        // UTF 8 str from original
+        // NSData! type returned (optional)
+        //Data(self.utf8).base64EncodedString()
+        let utf8str = Data(str.utf8)
+        
+        // Base64 encode UTF 8 string
+        // fromRaw(0) is equivalent to objc 'base64EncodedStringWithOptions:0'
+        // Notice the unwrapping given the NSData! optional
+        // NSString! returned (optional)
+        let base64Encoded = utf8str.base64EncodedString()
+        print("Encoded:  \(base64Encoded)")
+
+        // Base64 Decode (go back the other way)
+        // Notice the unwrapping given the NSString! optional
+        // NSData returned
+        let data = Data(base64Encoded: base64Encoded)
+
+        // Convert back to a string
+        let base64Decoded = String(data: data!, encoding: .utf8)
+        print("Decoded:  \(base64Decoded)")
     }
     
     // Demo for regex
