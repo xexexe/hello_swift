@@ -16,8 +16,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // demo for uuid
+        self.demoUUID()
+        
         // demo for http
-        self.demoHttpGet()
+//        self.demoHttpGet()
 //        self.demoHttpDown()
         
         // demo for file manage
@@ -34,9 +37,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    func demoUUID() {
+        let uuid = NSUUID.init().uuidString
+        print("uuid is: \(uuid)")
+    }
+}
+
+extension ViewController {
     func demoHttpGet(){
         //https://swiftcafe.io/2015/12/20/nsurlsession/
-        if let url = NSURL(string: "http://10.10.0.129/php-demo/test.json") {
+        if let url = NSURL(string: "http://hb.ranjun.net.cn/netshare/test.php") {
             URLSession.shared.dataTask(with: url as URL){ data, response, error in
                 //...
                 print(data as Any)
