@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -16,15 +17,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // demo for uuid
-        self.demoUUID()
-        
         // demo for http
 //        self.demoHttpGet()
 //        self.demoHttpDown()
         
         // demo for file manage
 //        self.demoFileManage()
+        
+        // demo for uuid md5 and base64
+        self.demoUUID()
+        print(self.demoMD5(orignalStr: "oosssdddwelwellwl"))
+        self.demoEnBase64()
+        self.demoDeBase64()
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +79,46 @@ extension ViewController {
 //
 //            }.resume()
 //    }
+}
+
+extension ViewController {
+    func demoMD5(orignalStr: String) -> String {
+        
+        let str = orignalStr.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(orignalStr.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        
+        CC_MD5(str!, strLen, result)
+        
+        let hash = NSMutableString()
+        for i in 0 ..< digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        result.deinitialize()
+        
+        return String(format: hash as String)
+    }
+    
+    func demoDeBase64() {
+        let base64String = "SGVsbG8gV29ybGQ="
+        // 将base64字符串转换成NSData
+        let base64Data = NSData(base64Encoded:base64String, options:NSData.Base64DecodingOptions(rawValue: 0))
+        // 对NSData数据进行UTF8解码
+        let stringWithDecode = NSString(data:base64Data! as Data, encoding:String.Encoding.utf8.rawValue)
+        print("base64String \(stringWithDecode!)")
+        
+        //结果
+        //base64String Hello World
+    }
+    
+    func demoEnBase64() {
+        let string = "Hello World"
+        let utf8EncodeData = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        // 将NSData进行Base64编码
+        let base64String = utf8EncodeData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: UInt(0)))
+        print("encodedString: \(base64String!)")
+    }
 }
 
 extension ViewController {

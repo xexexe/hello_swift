@@ -36,6 +36,7 @@
 		1F55E80C1EEA75400090089E /* BeginProjectSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeginProjectSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F55E8101EEA75400090089E /* BeginProjectSwift3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginProjectSwift3Tests.swift; sourceTree = "<group>"; };
 		1F55E8121EEA75400090089E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB4E6301EF00295005E344C /* OCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 			children = (
 				1F55E7FB1EEA75400090089E /* AppDelegate.swift */,
 				1F55E7FD1EEA75400090089E /* ViewController.swift */,
+				1FB4E6301EF00295005E344C /* OCHeader.h */,
 				1F55E7FF1EEA75400090089E /* Main.storyboard */,
 				1F55E8021EEA75400090089E /* Assets.xcassets */,
 				1F55E8041EEA75400090089E /* LaunchScreen.storyboard */,
@@ -359,6 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = BeginProjectSwift3/OCHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.markran.BeginProjectSwift3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = BeginProjectSwift3/OCHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
