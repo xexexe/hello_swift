@@ -13,6 +13,7 @@
 		1F154B131F271EAB00EF575A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F154B121F271EAB00EF575A /* Assets.xcassets */; };
 		1F154B161F271EAB00EF575A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F154B141F271EAB00EF575A /* LaunchScreen.storyboard */; };
 		1F154B211F271EAB00EF575A /* AVPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F154B201F271EAB00EF575A /* AVPlayerTests.swift */; };
+		1F154B2C1F2736FE00EF575A /* photoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F154B2B1F2736FE00EF575A /* photoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1F154B1C1F271EAB00EF575A /* AVPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F154B201F271EAB00EF575A /* AVPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerTests.swift; sourceTree = "<group>"; };
 		1F154B221F271EAB00EF575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F154B2B1F2736FE00EF575A /* photoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				1F154B0B1F271EAB00EF575A /* AppDelegate.swift */,
 				1F154B0D1F271EAB00EF575A /* ViewController.swift */,
+				1F154B2B1F2736FE00EF575A /* photoCollectionViewController.swift */,
 				1F154B0F1F271EAB00EF575A /* Main.storyboard */,
 				1F154B121F271EAB00EF575A /* Assets.xcassets */,
 				1F154B141F271EAB00EF575A /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 			files = (
 				1F154B0E1F271EAB00EF575A /* ViewController.swift in Sources */,
 				1F154B0C1F271EAB00EF575A /* AppDelegate.swift in Sources */,
+				1F154B2C1F2736FE00EF575A /* photoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
