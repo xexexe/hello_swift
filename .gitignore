@@ -28,6 +28,17 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+
 
 # Carthage
 #

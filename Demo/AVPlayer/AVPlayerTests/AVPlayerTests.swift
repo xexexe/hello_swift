@@ -1,15 +1,15 @@
 //
-//  BeginProjectSwift3Tests.swift
-//  BeginProjectSwift3Tests
+//  AVPlayerTests.swift
+//  AVPlayerTests
 //
-//  Created by Mark Ran on 2017/6/9.
-//  Copyright © 2017年 markran. All rights reserved.
+//  Created by Mark Ran on 2017/7/25.
+//  Copyright © 2017年 hehe. All rights reserved.
 //
 
 import XCTest
-@testable import BeginProjectSwift3
+@testable import AVPlayer
 
-class BeginProjectSwift3Tests: XCTestCase {
+class AVPlayerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
