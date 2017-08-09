@@ -17,10 +17,11 @@ class ViewController: UIViewController {
 //        let pattern = "^13$"
 //        let str = "lsdjlfafjllf1357892131231546143698wdaf"
 //        check(pattern: pattern, str: str)
-        let mailPattern = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
-        let mailStr = "lsls@oodd.com"
-        check(pattern: mailPattern, str: mailStr)
-        
+//        let mailPattern = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
+//        let mailStr = "lsls@oodd.com"
+//        check(pattern: mailPattern, str: mailStr)
+        let hehe = URLRegex(text: "sjdflasjdflweojfoemflfsajhttp://2233de.jpg")
+        print(hehe)
         
 //        if let path = Bundle.main.path(forResource: "hehe", ofType: "html") {
 ////            let pattern = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
@@ -78,5 +79,37 @@ class ViewController: UIViewController {
             print(error)
         }
     }
+    
+    func URLRegex(text: String)
+    {
+        
+        do{
+            
+            var dataArray = [String]()
+            
+            let pattern = "http?://.*?(jpg|png)"
+            
+            let dataDetector = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
+            
+            let res = dataDetector.matches(in: text, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, text.characters.count))
+            
+            for checkingRes in res
+            {
+                let str = (text as NSString).substring(with: checkingRes.range)
+                
+                print(str)
+                
+                dataArray.append(str)
+                
+            }
+            
+            print(dataArray)
+            
+        }catch
+        {
+            print(error)
+        }
+    }
+
 }
 
