@@ -105,13 +105,42 @@
                     <view key="view" contentMode="scaleToFill" id="B8I-lJ-LLT">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-pa-2hN">
+                                <rect key="frame" x="0.0" y="44" width="333" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56J-MR-19H">
+                                <rect key="frame" x="334" y="44" width="333" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrs-zK-YRD">
+                                <rect key="frame" x="8" y="6" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="2B9-Gt-VhX" kind="unwind" unwindAction="closeWithSegue:" id="CCW-ma-UV4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="56J-MR-19H" firstAttribute="top" secondItem="7ZJ-nG-UT7" secondAttribute="bottom" constant="44" id="7Bf-IC-ZVW"/>
+                            <constraint firstItem="sdS-rB-aAt" firstAttribute="top" secondItem="ZbP-pa-2hN" secondAttribute="bottom" id="HaN-ft-rsc"/>
+                            <constraint firstItem="56J-MR-19H" firstAttribute="width" secondItem="ZbP-pa-2hN" secondAttribute="width" id="KWb-q9-iZf"/>
+                            <constraint firstItem="ZbP-pa-2hN" firstAttribute="leading" secondItem="B8I-lJ-LLT" secondAttribute="leadingMargin" constant="-20" id="Qcd-Wc-Fwi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="56J-MR-19H" secondAttribute="trailing" constant="-20" id="auk-e7-kNs"/>
+                            <constraint firstItem="56J-MR-19H" firstAttribute="leading" secondItem="ZbP-pa-2hN" secondAttribute="trailing" constant="1" id="dgh-ff-Fyc"/>
+                            <constraint firstItem="ZbP-pa-2hN" firstAttribute="top" secondItem="7ZJ-nG-UT7" secondAttribute="bottom" constant="44" id="gTj-x0-4Lx"/>
+                            <constraint firstItem="sdS-rB-aAt" firstAttribute="top" secondItem="56J-MR-19H" secondAttribute="bottom" id="iy8-hf-Q3U"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nev-TU-i4F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1S6-wa-mg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2B9-Gt-VhX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="545" y="-60"/>
+            <point key="canvasLocation" x="544.67766116941539" y="-55.200000000000003"/>
         </scene>
     </scenes>
 </document>

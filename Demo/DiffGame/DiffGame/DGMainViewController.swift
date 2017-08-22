@@ -47,6 +47,10 @@ class DGMainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func close(segue:UIStoryboardSegue){
+        //
+    }
 
     func initLevelFirstFlowLayout() {
         levelFlowLayout = DGFirstLevelCollectionViewFlowLayout()
