@@ -9,7 +9,13 @@
 import UIKit
 import MobileCoreServices
 
+protocol TPickerViewControllerDelegate: class {
+    func pickerViewControllerDidDismiss()
+}
+
 class TPickerViewController: UIImagePickerController {
+    
+    weak var pickerDelegate: TPickerViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +27,7 @@ class TPickerViewController: UIImagePickerController {
         self.showsCameraControls = true
         self.videoQuality = UIImagePickerControllerQualityType.typeHigh
         self.cameraFlashMode = UIImagePickerControllerCameraFlashMode.auto
-        self.videoMaximumDuration = 20;
+        self.videoMaximumDuration = 20
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +54,8 @@ extension TPickerViewController: UIImagePickerControllerDelegate {
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        dismiss(animated: true, completion: nil)
+        pickerDelegate?.pickerViewControllerDidDismiss()
     }
 }
 

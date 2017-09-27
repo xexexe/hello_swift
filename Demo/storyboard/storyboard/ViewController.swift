@@ -23,7 +23,13 @@ class ViewController: UIViewController {
 
     @IBAction func pressButton(_ sender: Any) {
         let picker = TPickerViewController()
+        picker.pickerDelegate = self
         present(picker, animated: true, completion: nil)
     }
 }
 
+extension ViewController: TPickerViewControllerDelegate {
+    func pickerViewControllerDidDismiss() {
+        performSegue(withIdentifier: "showNextViewController", sender: nil)
+    }
+}
