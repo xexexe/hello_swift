@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        test1()
+        //test1()
         test2()
     }
 
@@ -105,18 +105,35 @@ class ViewController: UIViewController {
         } 
          */
         
-        let url: NSString = "122943@sss.6624@qq.com"
-        do {
-            let regex = try NSRegularExpression(pattern: "[^@]*\\.", options: NSRegularExpression.Options(rawValue: 0))
-            let match = regex.matches(in: url as String, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, url.length))
-            print(match)
-            for m in match {
-                print(url.substring(with: m.range))
-            }
-        } catch  {
-            print(error)
-        }
+//        let url: NSString = "12swijflsjfi@eee.2943@sss.6624@qq.com"
+//        do {
+//            let regex = try NSRegularExpression(pattern: "[^@]*\\.", options: NSRegularExpression.Options(rawValue: 0))
+//            let match = regex.matches(in: url as String, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, url.length))
+//            print(match)
+//            for m in match {
+//                print(url.substring(with: m.range))
+//            }
+//        } catch  {
+//            print(error)
+//        }
         
+        if let path = Bundle.main.path(forResource: "hehe", ofType: "html") {
+            do {
+                //let input = try?String.init(contentsOfFile: path, encoding: .utf8)
+                let input = "122943@sss.6624@qq.com"
+                if let result = input as NSString? {
+                    let pattern = "[^@]*\\."
+                    
+                    let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
+                    let match = regex.matches(in: result as String, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, result.length))
+                    for m in match {
+                        print(result.substring(with: m.range))
+                    }
+                }
+            } catch  {
+                print(error)
+            }
+        }
     }
 
     private func check(str: String) {
