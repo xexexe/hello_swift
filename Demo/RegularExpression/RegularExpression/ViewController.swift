@@ -119,10 +119,12 @@ class ViewController: UIViewController {
         
         if let path = Bundle.main.path(forResource: "hehe", ofType: "html") {
             do {
-                //let input = try?String.init(contentsOfFile: path, encoding: .utf8)
-                let input = "122943@sss.6624@qq.com"
+                let input = try?String.init(contentsOfFile: path, encoding: .utf8)
+                //let input = "122943@sss.6624@qq.com"
+                //let input = "http://www.baidu.com"
                 if let result = input as NSString? {
-                    let pattern = "[^@]*\\."
+                    //let pattern = "[^@]*\\."
+                    let pattern = "\\bhttps?://[a-zA-Z0-9\\-.]+(?::(\\d+))?(?:(?:/[a-zA-Z0-9\\-._?,'+\\&%$=~*!():@\\\\]*)+)?"
                     
                     let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
                     let match = regex.matches(in: result as String, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, result.length))
