@@ -30,6 +30,8 @@ class ViewController: UIViewController {
             let videoReaderOutput = AVAssetReaderTrackOutput.init(track: videoTrack, outputSettings: options)
             
             reader?.add(videoReaderOutput)
+            //add video start time
+            reader?.timeRange = CMTimeRange(start: CMTimeMake(1, 1), duration: CMTimeMake(2, 1))
             reader?.startReading()
             
             if let videoBuffer = videoReaderOutput.copyNextSampleBuffer() {
