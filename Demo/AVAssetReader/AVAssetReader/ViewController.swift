@@ -60,13 +60,13 @@ class ViewController: UIViewController {
 //            } else {
 //                // `baseAddress` is `nil`
 //            }
-            var baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+            //var baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
             let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
             let width = CVPixelBufferGetWidth(imageBuffer)
             let height = CVPixelBufferGetHeight(imageBuffer)
             
             let colorSpace = CGColorSpaceCreateDeviceRGB()
-            let context = CGContext(data: &baseAddress,
+            let context = CGContext(data: CVPixelBufferGetBaseAddress(imageBuffer),
                                     width: width,
                                     height: height,
                                     bitsPerComponent: 8,
