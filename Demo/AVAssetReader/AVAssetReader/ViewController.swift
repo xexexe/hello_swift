@@ -34,13 +34,25 @@ class ViewController: UIViewController {
             reader?.timeRange = CMTimeRange(start: CMTimeMake(1, 1), duration: CMTimeMake(2, 1))
             reader?.startReading()
             
-            if let videoBuffer = videoReaderOutput.copyNextSampleBuffer() {
-                print(videoBuffer)
-                
+            var date = NSDate().timeIntervalSince1970
+            while let videoBuffer = videoReaderOutput.copyNextSampleBuffer() {
                 if let imagecg = imageFromSampleBufferRef(sampleBufferRef: videoBuffer) {
                     imageView.image = UIImage.init(cgImage: imagecg)
+                    print("-------",(NSDate().timeIntervalSince1970 - date)*1000)
+                    date = NSDate().timeIntervalSince1970
                 }
+                //[NSThread sleepForTimeInterval:sampleInternal];
+                //Thread.sleep(forTimeInterval: 0.01)
             }
+//            NSLog("hehehe")
+//            if let videoBuffer = videoReaderOutput.copyNextSampleBuffer() {
+//                NSLog("ooooo")
+//
+//                if let imagecg = imageFromSampleBufferRef(sampleBufferRef: videoBuffer) {
+//                    imageView.image = UIImage.init(cgImage: imagecg)
+//                }
+//                NSLog("eeeeeee")
+//            }
         }
     }
 
